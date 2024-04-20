@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: labs
+  namespace: argocd
+spec:
+  # Project description
+  description: DevOps Labs
+
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'https://github.com/LeonaKurtaj/web-infra.git'
+
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  # Destination clusters can be identified by 'server', 'name', or both.
+  destinations:
+  - namespace: labs
+    server: https://kubernetes.default.svc
+    name: in-cluster
+
+  # When using Applications-in-any-namespace, this field determines which namespaces this AppProject permits
+  # Applications to reside in. Details: https://argo-cd.readthedocs.io/en/stable/operator-manual/app-any-namespace/
+  sourceNamespaces:
+  - "labs-*"
