@@ -1,0 +1,10 @@
+{{- if .Values.config.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "web-client.fullname" . }}
+data: 
+  {{- if .Values.config}}
+  {{- toYaml .Values.config.data | nindent 2}}
+  {{- end}}
+{{- end}}
