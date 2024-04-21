@@ -9,7 +9,7 @@ metadata:
     projet: devops
 spec:
   # The project the application belongs to.
-  project: labs1
+  project: labs
 
   # Source of the application manifests
   source:

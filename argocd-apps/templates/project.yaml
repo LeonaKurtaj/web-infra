@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: labs1
+  name: labs
   namespace: argocd
 spec:
   # Project description
