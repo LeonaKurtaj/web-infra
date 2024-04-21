@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: labs
+  name: labs1
   namespace: argocd
 spec:
   # Project description
@@ -14,11 +14,11 @@ spec:
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   # Destination clusters can be identified by 'server', 'name', or both.
   destinations:
-  - namespace: labs
+  - namespace: labs1
     server: https://kubernetes.default.svc
     name: in-cluster
 
   # When using Applications-in-any-namespace, this field determines which namespaces this AppProject permits
   # Applications to reside in. Details: https://argo-cd.readthedocs.io/en/stable/operator-manual/app-any-namespace/
   sourceNamespaces:
-  - "labs-*"
+  - "labs1-*"
