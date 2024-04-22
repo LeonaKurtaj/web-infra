@@ -9,7 +9,7 @@ metadata:
     projet: devops
 spec:
   # The project the application belongs to.
-  project: labs1
+  project: labs
 
   # Source of the application manifests
   source:
@@ -24,7 +24,7 @@ spec:
   destination:
     # cluster API URL
     server: https://kubernetes.default.svc  
-    namespace: labs1
+    namespace: labs
     
 
   # Sync policy
