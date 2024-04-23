@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: LeonaKurtaj/api-sample
-  pullPolicy: web-client-sample
+  repository: leonakurtaj/api-sample
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
